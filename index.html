@@ -51,6 +51,8 @@
     }
 
     function logOut() {
+      liff.logout()
+      window.location.reload()
     }
 
     function closed() {
@@ -64,7 +66,7 @@
 
     function openWindow() {
       liff.openWindow({
-        url: "https://line.me",
+        url: "https://www.iqsoft.co.th",
         external: true
       })
     }
