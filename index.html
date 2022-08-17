@@ -66,10 +66,10 @@
     }
 
     async function sendMsg() {
-      if (liff.getContext().type !=="nine"){
+      if (liff.getContext().type !=="none"){
         await liff.sendMessages([
           {
-            "tupe": "sticker",
+            "type": "sticker",
             "stickerId": 1,
             "packageId": 1
           }
