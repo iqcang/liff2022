@@ -31,7 +31,7 @@
     <tr>
       
       <td><img id="pictureUrl"></script></td>
-      <td><p id="displayName"><b>displayName:</b> </p></td><!--DisplayName-->
+      <td><p id="displayName"><b>:</b> </p></td><!--DisplayName-->
       <td><script>getUserStatusMessage()</script></td><!--Status Message-->
       <td><script>getUserId()</script></td><!--userId-->
       <!--<td>Thanawat</td>--><!--name-->
@@ -191,12 +191,12 @@
     }
 
     async function getUserPictureUrl() {
-      const profile = await liff.getUserPictureUrl()
+      const profile = await liff.getProfile()
       document.getElementById("pictureUrl2").src = profile.pictureUrl
     }
 
     async function getUserDisplayName() {
-      const profile = await liff.getUserDisplayName()
+      const profile = await liff.getProfile()
       document.getElementById("displayName").append(profile.displayName)
     }
     
@@ -206,7 +206,7 @@
     }
 
     async function getUserEmail() {
-      const profile = await liff.getUserEmail()
+      const profile = await liff.getProfile()
       document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
     }
 
