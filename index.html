@@ -28,13 +28,13 @@
     
     <tr>
 
-      <td><img src="https://sprofile.line-scdn.net/0h3r8aRiozbF0VGEZhpZkSImVIbzc2aTVPaXh2PyhMZ2UhKiNePXshaSYROzggLn4NOXYqOCNMNDkZCxs7C06QaRIoMmosKikLMXwhug"></td>
-      <td>IQ'</td><!--DisplayName-->
-      <td></td><!--Status Message-->
-      <td>U1c9c34ada887229addc6187a91c99517</td><!--userId-->
+      <td><script>getUserPictureUrl()</script></td>
+      <td><script>getUserDisplayName()</script></td><!--DisplayName-->
+      <td><script>getUserStatusMessage()</script></td><!--Status Message-->
+      <td><script>getUserId()</script></td><!--userId-->
       <!--<td>Thanawat</td>--><!--name-->
       <!--<td>chuensakolwong</td>--><!--surname-->
-      <!--<td>iqcang@gmail.com</td>--><!--email-->
+      <td><script>getUserEmail()</script></td><!--email-->
       <!--<td>0832292299</td>--><!--tel-->
       <td>male</td><!--sex-->
       <td>45-49</td>
@@ -42,7 +42,7 @@
       <td>Thailand</td><!--country-->
       <td>สงขลา</td>
       <td>IOS</td><!--os-->
-      <td>FRIEND</td><!--isFriendship-->
+      <td><script>getFriendship()</script></td><!--isFriendship-->
       </tr>
 
   <p id="os"><b>OS:</b> </p>
@@ -74,7 +74,7 @@
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <button id="btnClose" onclick="closed()">Close</button>
 
-  <!-- <script src="js/vconsole.min.js"></script> -->
+  <!-- <script src="js/vconsole.min.js"></scrip> -->
   <!-- <script>
     var vConsole = new VConsole()
     console.log("Hello World!")
