@@ -7,7 +7,78 @@
   <link rel="stylesheet" href="css/style.css" media="all">
 </head>
 <body>
-  
+  <tr>
+
+    <td><img src="https://sprofile.line-scdn.net/0h3r8aRiozbF0VGEZhpZkSImVIbzc2aTVPaXh2PyhMZ2UhKiNePXshaSYROzggLn4NOXYqOCNMNDkZCxs7C06QaRIoMmosKikLMXwhug"></td>
+    <td>IQ'</td><!--DisplayName-->
+    <td></td><!--Status Message-->
+    <td>U1c9c34ada887229addc6187a91c99517</td><!--userId-->
+    <!--<td>Thanawat</td>--><!--name-->
+    <!--<td>chuensakolwong</td>--><!--surname-->
+    <!--<td>iqcang@gmail.com</td>--><!--email-->
+    <!--<td>0832292299</td>--><!--tel-->
+    <td>male</td><!--sex-->
+    <td>45-49</td>
+    <!--<td>1975-12-18</td>--><!--bdate-->
+    <td>Thailand</td><!--country-->
+    <td>สงขลา</td>
+    <td>IOS</td><!--os-->
+    <td>FRIEND</td><!--isFriendship-->
+    </tr>
+    
+    <tr>
+      
+      <td><script>getUserPictureUrl()</script></td>
+      <td><script>getUserDisplayName()</script></td><!--DisplayName-->
+      <td><script>getUserStatusMessage()</script></td><!--Status Message-->
+      <td><script>getUserId()</script></td><!--userId-->
+      <!--<td>Thanawat</td>--><!--name-->
+      <!--<td>chuensakolwong</td>--><!--surname-->
+      <td><script>getUserEmail()</script></td><!--email-->
+      <!--<td>0832292299</td>--><!--tel-->
+      <td>male</td><!--sex-->
+      <td>45-49</td>
+      <!--<td>1975-12-18</td>--><!--bdate-->
+      <td>Thailand</td><!--country-->
+      <td>สงขลา</td>
+      <td>IOS</td><!--os-->
+      <td><script>getFriendship()</script></td><!--isFriendship-->
+      </tr>
+
+
+  <!--
+  <p id="os"><b>OS:</b> </p>
+  <p id="language"><b>Language:</b> </p>
+  <p id="version"><b>Version:</b> </p>
+  <p id="isInClient"><b>isInClient:</b> </p>
+  <p id="accessToken"><b>AccessToken:</b> </p>
+  <img id="pictureUrl">
+  <p id="pictureUrl2"><b>pictureUrl2:</b> </p>
+  <p id="userId"><b>userId:</b> </p>
+  <p id="displayName"><b>displayName:</b> </p>
+  <p id="statusMessage"><b>statusMessage:</b> </p>
+  <p id="decodedIDToken"><b>email:</b> </p>
+  <p id="decodedIDToken2"><b>email2:</b> </p>
+  <p id="type"><b>type:</b> </p>
+  <p id="viewType"><b>viewType:</b> </p>
+  <p id="utouId"><b>utouId:</b> </p>
+  <p id="roomId"><b>roomId:</b> </p>
+  <p id="groupId"><b>groupId:</b> </p>
+  <p id="friendship"><b>isFriendship:</b> </p>
+  <p id="scanCode"><b>Code:</b> </p>
+  <p id="isLoggedIn"><b>isLoggedIn:</b> </p>
+  <p id="universalLink1"><b>Universal Link:</b> </p>
+  <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
+  <p><a href="liff/path/?param=9">Link to Path</a></p>
+  -->
+<!--
+  <button id="btnMsg" onclick="sendMsg()">Send Message</button>
+  <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
+  <button onclick="openWindow()">Open Window</button>
+  <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
+  <button id="btnLogOut" onclick="logOut()">Log Out</button>
+  <button id="btnClose" onclick="closed()">Close</button>
+-->
 
 
   <!-- <script src="js/vconsole.min.js"></scrip> -->
@@ -17,7 +88,6 @@
   </script> -->
 
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-  <!--
   <script>
     function createUniversalLink() {
     }
@@ -102,8 +172,7 @@
       document.getElementById("roomId").append(liff.getContext().roomId)
       document.getElementById("groupId").append(liff.getContext().groupId)
     }
-  -->
-  <script>
+
     async function getUserProfile() {
       const profile = await liff.getProfile()
       document.getElementById("pictureUrl").src = profile.pictureUrl
