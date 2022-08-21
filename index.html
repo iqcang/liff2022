@@ -30,13 +30,13 @@
 
     <tr>
       
-      <td><img id="pictureUrl"></script></td>
-      <td><p id="displayName"><b>:</b> </p></td><!--DisplayName-->
-      <td><script>getUserStatusMessage()</script></td><!--Status Message-->
-      <td><script>getUserId()</script></td><!--userId-->
+      <td><img id="pictureUrl"></td>
+      <td><p id="displayName"></p></td><!--DisplayName-->
+      <td><p id="statusMessage"></p></td><!--Status Message-->
+      <td><p id="userId"></p></td><!--userId-->
       <!--<td>Thanawat</td>--><!--name-->
       <!--<td>chuensakolwong</td>--><!--surname-->
-      <td><p id="decodedIDToken"><b>:</b> </p></td><!--email-->
+      <td><p id="decodedIDToken"></p></td><!--email-->
       <!--<td>0832292299</td>--><!--tel-->
       <td>male</td><!--sex-->
       <td>45-49</td>
@@ -44,7 +44,7 @@
       <td>Thailand</td><!--country-->
       <td>สงขลา</td>
       <td>IOS</td><!--os-->
-      <td><p id="friendship"><b></b> </p></td><!--isFriendship-->
+      <td><p id="friendship"></p></td><!--isFriendship-->
       </tr>
 </table>
 
@@ -186,13 +186,13 @@
     }
 
     async function getUserId() {
-      const profile = await liff.getUserId()
+      const profile = await liff.getProfile()
       document.getElementById("userId").append(profile.userId)
     }
 
     async function getUserPictureUrl() {
       const profile = await liff.getProfile()
-      document.getElementById("pictureUrl2").src = profile.pictureUrl
+      document.getElementById("pictureUrl").src = profile.pictureUrl
     }
 
     async function getUserDisplayName() {
@@ -201,7 +201,7 @@
     }
     
     async function getUserStatusMessage() {
-      const profile = await liff.getUserStatusMessage()
+      const profile = await liff.getProfile()
       document.getElementById("statusMessage").append(profile.statusMessage)
     }
 
@@ -238,8 +238,8 @@
 
         getUserPictureUrl()
         getUserDisplayName()
-        //getUserStatusMessage()
-        //getUserId()
+        getUserStatusMessage()
+        getUserId()
         getUserEmail()
 
 
