@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css" media="all">
 </head>
 <body>
+  <!--
   <tr>
 
     <td><img src="https://sprofile.line-scdn.net/0h3r8aRiozbF0VGEZhpZkSImVIbzc2aTVPaXh2PyhMZ2UhKiNePXshaSYROzggLn4NOXYqOCNMNDkZCxs7C06QaRIoMmosKikLMXwhug"></td>
@@ -45,7 +46,7 @@
       <td>IOS</td><!--os-->
       <td><script>getFriendship()</script></td><!--isFriendship-->
       </tr>
-
+    -->
   <p id="os"><b>OS:</b> </p>
   <p id="language"><b>Language:</b> </p>
   <p id="version"><b>Version:</b> </p>
@@ -84,6 +85,7 @@
   </script> -->
 
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <!--
   <script>
     function createUniversalLink() {
     }
@@ -168,7 +170,8 @@
       document.getElementById("roomId").append(liff.getContext().roomId)
       document.getElementById("groupId").append(liff.getContext().groupId)
     }
-
+  -->
+  <script>
     async function getUserProfile() {
       const profile = await liff.getProfile()
       document.getElementById("pictureUrl").src = profile.pictureUrl
