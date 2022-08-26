@@ -54,17 +54,8 @@
   <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
   <p><a href="liff/path/?param=9">Link to Path</a></p>
   
-<!--
-  <button id="btnMsg" onclick="sendMsg()">Send Message</button>
-  <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
-  <button onclick="openWindow()">Open Window</button>
-  <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
-  <button id="btnLogOut" onclick="logOut()">Log Out</button>
-  <button id="btnClose" onclick="closed()">Close</button>
--->
 
-
-  <!-- <script src="js/vconsole.min.js"></scrip> -->
+  <!-- <script src="js/vconsole.min.js"></script> -->
   <!-- <script>
     var vConsole = new VConsole()
     console.log("Hello World!")
@@ -159,35 +150,9 @@
     async function getUserProfile() {
       const profile = await liff.getProfile()
       document.getElementById("pictureUrl").src = profile.pictureUrl
-      document.getElementById("displayName").append(profile.displayName)
-      document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
-      document.getElementById("decodedIDToken2").append(liff.getDecodedIDToken().email)
-
-     
-    }
-
-    async function getUserId() {
-      const profile = await liff.getProfile()
       document.getElementById("userId").append(profile.userId)
-    }
-
-    async function getUserPictureUrl() {
-      const profile = await liff.getProfile()
-      document.getElementById("pictureUrl").src = profile.pictureUrl
-    }
-
-    async function getUserDisplayName() {
-      const profile = await liff.getProfile()
-      document.getElementById("displayName").append(profile.displayName)
-    }
-    
-    async function getUserStatusMessage() {
-      const profile = await liff.getProfile()
       document.getElementById("statusMessage").append(profile.statusMessage)
-    }
-
-    async function getUserEmail() {
-      const profile = await liff.getProfile()
+      document.getElementById("displayName").append(profile.displayName)
       document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
     }
 
@@ -197,6 +162,7 @@
       document.getElementById("version").append(liff.getVersion())
       document.getElementById("accessToken").append(liff.getAccessToken())
       document.getElementById("isInClient").append(liff.isInClient())
+      
       if (liff.isInClient()){
         document.getElementById("btnLogOut").style.display = "none"
       }else{
@@ -212,20 +178,11 @@
       document.getElementById("isLoggedIn").append(liff.isLoggedIn())
       if (liff.isLoggedIn()) {
         getEnvironment()
-        //getUserProfile()
-        //getContext()
+        getUserProfile()
+        getContext()
         getFriendship()
-        //createUniversalLink()
+        createUniversalLink()
 
-        getUserPictureUrl()
-        getUserDisplayName()
-        getUserStatusMessage()
-        getUserId()
-        getUserEmail()
-
-
-
-        
       } else {
         liff.login()
       }
@@ -233,7 +190,6 @@
     }
     main()
   </script>
-
 
 
 </body>
