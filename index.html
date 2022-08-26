@@ -8,28 +8,7 @@
 </head>
 <body>
   
-<table border="2">
-  
-  <!--
-    <tr>
-
-    <td><img src="https://sprofile.line-scdn.net/0h3r8aRiozbF0VGEZhpZkSImVIbzc2aTVPaXh2PyhMZ2UhKiNePXshaSYROzggLn4NOXYqOCNMNDkZCxs7C06QaRIoMmosKikLMXwhug"></td>
-    <td>IQ'</td><!--DisplayName-->
-    <td></td><!--Status Message-->
-    <td>U1c9c34ada887229addc6187a91c99517</td><!--userId-->
-    <!--<td>Thanawat</td>--><!--name-->
-    <!--<td>chuensakolwong</td>--><!--surname-->
-    <td>iqcang@gmail.com</td><!--email-->
-    <!--<td>0832292299</td>--><!--tel-->
-    <td>male</td><!--sex-->
-    <td>45-49</td>
-    <!--<td>1975-12-18</td>--><!--bdate-->
-    <td>Thailand</td><!--country-->
-    <td>สงขลา</td>
-    <td>IOS</td><!--os-->
-    <td>FRIEND</td><!--isFriendship-->
-    </tr>
-  -->
+<table border="0">
     <tr>
       
       <td><img id="pictureUrl"></td>
@@ -40,12 +19,12 @@
       <!--<td>chuensakolwong</td>--><!--surname-->
       <td><p id="decodedIDToken"></p></td><!--email-->
       <!--<td>0832292299</td>--><!--tel-->
-      <td>male</td><!--sex-->
-      <td>45-49</td>
+      <td></td><!--sex-->
+      <td></td>
       <!--<td>1975-12-18</td>--><!--bdate-->
       <td>Thailand</td><!--country-->
-      <td>สงขลา</td>
-      <td>IOS</td><!--os-->
+      <td></td>
+      <td><p id="os"></p></td><!--os-->
       <td><p id="friendship"></p></td><!--isFriendship-->
       </tr>
 </table>
@@ -232,7 +211,7 @@
       await liff.init({ liffId: "1657391062-xjk7glV0" })
       document.getElementById("isLoggedIn").append(liff.isLoggedIn())
       if (liff.isLoggedIn()) {
-        //getEnvironment()
+        getEnvironment()
         //getUserProfile()
         //getContext()
         getFriendship()
